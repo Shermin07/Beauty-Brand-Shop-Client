@@ -3,6 +3,7 @@
 
 import { useLoaderData } from "react-router";
 import MyCartBrand from "../../Components/MyCartBrand/MyCartBrand";
+import { useState } from "react";
 
 
 
@@ -12,8 +13,10 @@ const My_Cart = () => {
 
 
 
-   const cartItems = useLoaderData()
-   console.log(cartItems)
+   const loadedCartItems = useLoaderData()
+   
+
+   const [ cartItems, setCartItems] = useState(loadedCartItems); 
 
 
   return (
@@ -21,7 +24,9 @@ const My_Cart = () => {
     
     <div className="grid grid-cols-3 gap-4">
     {
-      cartItems?.map(item =><MyCartBrand   item ={item} 
+      loadedCartItems?.map(item =><MyCartBrand cartItems = {cartItems} 
+        setCartItems = {setCartItems}
+         item ={item} 
       >
 
       </MyCartBrand> )

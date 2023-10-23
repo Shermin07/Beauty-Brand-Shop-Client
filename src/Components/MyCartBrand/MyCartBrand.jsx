@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 
-const MyCartBrand = ({item}) => {
+const MyCartBrand = ({item, cartItems,setCartItems}) => {
 
     const {_id,name, brandName, type,price,shortDescription,image,rating,details} = item || {} ;
 
@@ -30,6 +30,8 @@ const MyCartBrand = ({item}) => {
            'Deleted!',
             'Your item has been deleted.',
             'success' )
+            const remaining = cartItems.filter(item => item._id !== _id)
+            setCartItems(remaining)
                 }
             })
         }

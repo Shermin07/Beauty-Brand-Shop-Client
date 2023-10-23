@@ -6,6 +6,8 @@ import Swal from 'sweetalert2'
 const Add_Products = () => {
     const [selectedRating, setSelectedRating] = useState(0);
 
+  
+
     const handleAdded = e =>{
         e.preventDefault();
 
@@ -53,7 +55,7 @@ const Add_Products = () => {
   </label>
   <label className="input-group">
     
-    <input type="text" name="name" placeholder="Name" className="input input-bordered w-96" />
+    <input type="text" name="name"  placeholder="Name" className="input input-bordered w-96" />
   </label>
 </div>
             <div className="form-control md:w-1/2">
@@ -62,7 +64,7 @@ const Add_Products = () => {
   </label>
   <label className="input-group">
    
-    <input type="text" name="brandName" placeholder="Brand name" className="input input-bordered w-96" />
+    <input type="text" name="brandName"  placeholder="Brand name" className="input input-bordered w-96" />
   </label>
 </div>
           </div>
@@ -91,7 +93,7 @@ const Add_Products = () => {
   </label>
   <label className="input-group">
   
-    <input type="text" name="price" placeholder="Price" className="input input-bordered w-96" />
+    <input type="text" name="price"  placeholder="Price" className="input input-bordered w-96" />
   </label>
 </div>
 
@@ -120,17 +122,17 @@ const Add_Products = () => {
           <h1 className=" mt-7 flex">
             Ratings:<br/>
           <div className="rating rating-md  rating-half">
-  <input type="radio" name="rating-10" className="rating-hidden" onClick={(e) => setSelectedRating(e.target.value)}/>
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)}/>
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2"onClick={(e) => setSelectedRating(e.target.value)} />
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)} checked />
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1"onClick={(e) => setSelectedRating(e.target.value)} />
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)}/>
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2"onClick={(e) => setSelectedRating(e.target.value)} />
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-1"onClick={(e) => setSelectedRating(e.target.value)} />
-  <input type="radio" name="rating-10" className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10" value='0.5'  className="rating-hidden" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10" value='1'  className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10" value='1.5'  className="bg-green-500 mask mask-star-2 mask-half-2"onClick={(e) => setSelectedRating(e.target.value)} />
+  <input type="radio" name="rating-10" value='2'  className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)} checked />
+  <input type="radio" name="rating-10"value='2.5'  className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10"value='3'  className="bg-green-500 mask mask-star-2 mask-half-1"onClick={(e) => setSelectedRating(e.target.value)} />
+  <input type="radio" name="rating-10" value='3.5'  className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10" value='4'  className="bg-green-500 mask mask-star-2 mask-half-1" onClick={(e) => setSelectedRating(e.target.value)}/>
+  <input type="radio" name="rating-10"value='4.5'  className="bg-green-500 mask mask-star-2 mask-half-2"onClick={(e) => setSelectedRating(e.target.value)} />
+  <input type="radio" name="rating-10" value='5'  className="bg-green-500 mask mask-star-2 mask-half-1"onClick={(e) => setSelectedRating(e.target.value)} />
+  <input type="radio" name="rating-10" value='5.5'  className="bg-green-500 mask mask-star-2 mask-half-2" onClick={(e) => setSelectedRating(e.target.value)}/>
 </div>
           </h1>
       

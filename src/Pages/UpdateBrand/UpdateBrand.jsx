@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateBrand = () => {
+
+  const cartItems = useLoaderData();
+  console.log(cartItems);
+  
+  const {_id,name, brandName, type,price,shortDescription,image,rating,details} = cartItems || {} ;
 
     const [selectedRating,setSelectedRating] = useState()
 
@@ -17,9 +24,29 @@ const UpdateBrand = () => {
         const image = form.image.value ;
         const rating = selectedRating;
         
-        const newBrand = {name, brandName, type,price,image,rating} ;
-        console.log(newBrand) ;
+        const updateBrand = {name, brandName, type,price,image,rating} ;
+        console.log(updateBrand) ;
 
+        fetch(`http://localhost:5000/brandName/${_id}`,{
+          method: "PUT",
+          headers : {
+              "content-type" : "application/json"
+          },
+          body : JSON.stringify(updateBrand)
+      })
+      .then(res =>res.json())
+      .then(data =>{
+          console.log(data);
+          if(data.modifiedCount >0){
+              Swal.fire({
+                  title: 'succes!',
+                  text: 'Brand updated succesfully',
+                  icon: 'success',
+                  confirmButtonText: 'Cool'
+                })
+          }
+      })
+    
    
     }
     return (
@@ -43,7 +70,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
    
-    <input type="text" name="brandName" placeholder="Brand name" className="input input-bordered w-96" />
+    <input type="text" name="brandName" defaultValue={name} placeholder="Brand name" className="input input-bordered w-96" />
   </label>
 </div>
           </div>
@@ -55,7 +82,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
    
-  <select className="select select-bordered w-96 " name= "type">
+  <select className="select select-bordered w-96 " defaultValue={type} name= "type">
       <option disabled selected>Item category</option>
       <option>Perfume</option>
       <option>Blusher</option>
@@ -75,7 +102,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
   
-    <input type="text" name="price" placeholder="Price" className="input input-bordered w-96" />
+    <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered w-96" />
   </label>
 </div>
 
@@ -88,7 +115,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
     
-    <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-96" />
+    <input type="text" name="image" defaultValue={image} placeholder="Image URL" className="input input-bordered w-96" />
   </label>
 </div>
 
