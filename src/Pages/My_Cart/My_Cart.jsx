@@ -1,13 +1,15 @@
+/* eslint-disable react/jsx-key */
 
 
 import { useLoaderData } from "react-router";
+import MyCartBrand from "../../Components/MyCartBrand/MyCartBrand";
 
 
 
 const My_Cart = () => {
 
-  //const {name, brandName, type,price,shortDescription,image,rating,details} = //selectedBrand || {} ;
-//
+  //const {_id,name, brandName, type,price,shortDescription,image,rating,details} = selectedBrand || {} ;
+
 
 
    const cartItems = useLoaderData()
@@ -16,8 +18,15 @@ const My_Cart = () => {
 
   return (
       <>
-     <h1>My Cart</h1>
-     {cartItems.length}
+    
+    <div className="grid grid-cols-3 gap-4">
+    {
+      cartItems?.map(item =><MyCartBrand   item ={item} 
+      >
+
+      </MyCartBrand> )
+     }
+    </div>
     
       </>
             
