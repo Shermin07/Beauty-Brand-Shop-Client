@@ -40,9 +40,7 @@ const SelectedBrand = ({selectedBrand}) => {
            </div>
            
 
-           <div>
-          <BrandDetails selectedBrand= {selectedBrand}></BrandDetails>
-           </div>
+        
         </div>
     );
 };

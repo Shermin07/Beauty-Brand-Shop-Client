@@ -4,7 +4,7 @@ import BrandCards from "../BrandCards/BrandCards";
 
 
 const BrandCardsMap = ({brandCards}) => {
- 
+ console.log(brandCards)
    
     return (
         <div className="mt-12">
