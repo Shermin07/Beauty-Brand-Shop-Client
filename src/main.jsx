@@ -18,6 +18,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import UpdateBrand from './Pages/UpdateBrand/UpdateBrand';
 import PrivateRoute from './PrivateRoute';
 import SingleBrandDetails from './Components/SingleBrandDetails/SingleBrandDetails';
+import Error from './Components/Error/Error';
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/myCart",
-        element:<My_Cart></My_Cart>,
+        element:<PrivateRoute><My_Cart></My_Cart></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/cartItem')
        
       },
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         path:"/brandDetails/:_id",
         element: <BrandDetails></BrandDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/addToCart/${params._id}`)
+      },
+      {
+        path:"*",
+        element: <Error></Error>
       }
     ]
          

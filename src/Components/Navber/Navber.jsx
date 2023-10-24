@@ -20,17 +20,17 @@ const Navber = () => {
 
     const navLinks = <>
     
-    <li><NavLink to="/" >Home</NavLink></li>
-    <li><NavLink to="/addProducts"  >Add Products</NavLink></li>
-    <li><NavLink to="/myCart" >My Cart</NavLink></li>
-    <li><NavLink to="/login" >Login</NavLink></li>
+    <li><NavLink  to="/" className='text-white'>Home</NavLink></li>
+    <li><NavLink to="/addProducts" className='text-white' >Add Products</NavLink></li>
+    <li><NavLink to="/myCart" className='text-white'>My Cart</NavLink></li>
+    <li><NavLink to="/login"className='text-white' >Login</NavLink></li>
     
     
     </>
 
     return (
         <div>
-          <div className="navbar bg-base-100">
+          <div className="navbar bg-gray-600">
   <div className="navbar-start">
   <ul className="menu menu-horizontal px-1">
      
@@ -48,7 +48,7 @@ const Navber = () => {
        {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-2xl">AquaGlow </a>
+    <a className="btn btn-ghost text-white normal-case text-2xl">AquaGlow </a>
     
   </div>
   <div className="navbar-end">
@@ -56,7 +56,7 @@ const Navber = () => {
   <img src={user?.photo}  />
    
   {
-    user? <button onClick={handleSignOut}>Sign Out</button> : <Link to ="/login" className="btn"> Login
+    user? <button onClick={handleSignOut} className="text-white">Sign Out</button> : <Link to ="/login" className="btn"> Login
     </Link> 
   }
   </div>

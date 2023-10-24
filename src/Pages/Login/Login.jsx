@@ -103,13 +103,13 @@ const Login = () => {
        
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text font-semibold">Email</span>
           </label>
           <input type="email" ref={emailRef} placeholder=" Your email" name="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text font-semibold">Password</span>
           </label>
           <input type={showPassword ? 'text' :'password'} placeholder="password" name="password" className="input input-bordered" required />
           
@@ -119,7 +119,7 @@ const Login = () => {
       </span>
 
           <label className="label">
-            <a href="#" onClick={handleForgetPassword} className="label-text-alt link link-hover">Forgot password?</a>
+            <a href="#" onClick={handleForgetPassword} className="label-text-alt link link-hover font-bold">Forgot password?</a>
           </label>
         </div>
        
@@ -138,7 +138,7 @@ const Login = () => {
     loginSuccess && <p className="ml-7 text-green-700 mb-3">{loginSuccess}</p>
   }
 
-      <p className="ml-8">Don't have an account? Please</p> <br/> <Link to="/register"  className="ml-8 underline mb-2">Register</Link>
+      <p className="ml-8 font-bold">Don't have an account? Please</p> <br/> <Link to="/register"  className="ml-8 underline text-blue-800 font-bold mb-2">Register</Link>
     
       <div>
     
