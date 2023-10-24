@@ -61,8 +61,8 @@ const UpdateBrand = () => {
         <div>
             <h1 className="text-center font-bold text-3xl ">Update Product</h1>
           <form onSubmit={handleUpdate}>
-          <div className=" ml-32 mt-10">
-          <div className="flex mb-4 gap-4 ">
+          <div className="md:ml-0 lg:ml-32 mt-10">
+          <div className="flex  mb-4 gap-4 ">
           <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text">Name</span>
@@ -104,7 +104,7 @@ const UpdateBrand = () => {
 </div>
 
 
-            <div className="form-control md:w-1/2">
+            <div className="form-control md:w-1/2 ">
   <label className="label">
     <span className="label-text">Price</span>
   </label>
@@ -146,7 +146,7 @@ const UpdateBrand = () => {
           </h1>
       
          </div>
-            <input type="submit" value="Update" className="btn ml-96 mb-10 w-96  mt-6 "/> 
+            <input type="submit" value="Update" className="btn lg:ml-72 md:ml-56 ml-40 xl:ml-96 mb-10 w-96  mt-6 "/> 
           
           </form>
         </div>

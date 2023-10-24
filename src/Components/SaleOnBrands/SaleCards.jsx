@@ -5,7 +5,7 @@ const SaleCards = ({brandCards}) => {
 
     return (
         <div>
-             <div className="card  relative card-compact h-full w-96 bg-base-100 shadow-xl">
+             <div className="card   relative card-compact h-full  bg-base-100 shadow-xl">
   <figure className=" h-[260px] w-full object-cover "><img src={image}alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{brandName}</h2>

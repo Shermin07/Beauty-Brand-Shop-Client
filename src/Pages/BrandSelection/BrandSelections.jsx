@@ -28,7 +28,7 @@ const BrandSelections = () => {
         <div>
           
           <div>
-          <div className="carousel  h-[500px] w-[800px] ml-60 mt-12 mb-8">
+          <div className="carousel  h-[500px] w-[800px] lg:ml-28 xl:ml-60 mt-12 mb-8">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://media.istockphoto.com/id/1418265792/photo/cosmetics-swatches-peach-beige-red-and-coral-toned-styled-cosmetics-flat-lay-closeup-colour.webp?b=1&s=170667a&w=0&k=20&c=dI1HUlVgdzkNSi9fCedF8h3XcZewQoKlQnANePon0fU=" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -59,7 +59,7 @@ const BrandSelections = () => {
   </div>
 </div>
            
-               <div className="grid grid-cols-2 gap-4 mt-5">
+               <div className="grid grid-cols-1  md:grid-cols-2 gap-4 mt-5">
                 {
                     selectedBrand.map(selectedBrand => <SelectedBrand key={selectedBrand.brandName} selectedBrand={selectedBrand}>
 

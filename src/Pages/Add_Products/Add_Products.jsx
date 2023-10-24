@@ -45,10 +45,10 @@ const Add_Products = () => {
     }
     return (
         <div>
-            <h1 className="text-center font-bold text-3xl ">Add Products</h1>
+            <h1 className="text-center mt-5 font-bold text-3xl ">Add Products</h1>
           <form onSubmit={handleAdded}>
-          <div className=" ml-32 mt-10">
-          <div className="flex mb-4 gap-4 ">
+          <div className=" md:ml-60 ml-5 lg:ml-32 mt-10">
+          <div className="lg:flex grid grid-cols-1 mb-4 gap-4 ">
           <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text">Name</span>
@@ -68,7 +68,7 @@ const Add_Products = () => {
   </label>
 </div>
           </div>
-           <div className="flex mb-4 gap-4">
+           <div className="lg:flex grid grid-cols-1  mb-4 md:gap-2 lg:gap-4">
            <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text">Type</span>
@@ -98,7 +98,7 @@ const Add_Products = () => {
 </div>
 
            </div>
-          <div className="flex gap-4">
+          <div className="lg:flex grid grid-cols-1  gap-4">
           <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text">Short description</span>
@@ -137,7 +137,7 @@ const Add_Products = () => {
           </h1>
       
          </div>
-            <input type="submit" value="Added" className="btn ml-96 mb-10 w-96  mt-6 "/> 
+            <input type="submit" value="Added" className="btn ml-6 lg:ml-80 md:ml-56 xl:ml-96 mb-10 w-96  mt-6 "/> 
           
           </form>
         </div>

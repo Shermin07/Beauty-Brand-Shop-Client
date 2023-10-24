@@ -16,8 +16,8 @@ const SelectedBrand = ({selectedBrand}) => {
 
     return (
         <div>
-           <div>
-           <div className="card  bg-base-100 h-full shadow-xl">
+           <div className="">
+           <div className="card ml-56  md:ml-0 w-full  bg-base-100 h-full shadow-xl">
   <figure className="h-[250px] object-cover"><img src={image} alt="Brands" /></figure>
   <div className="card-body">
     <h2 className="card-title">

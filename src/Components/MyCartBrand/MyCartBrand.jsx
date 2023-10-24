@@ -40,7 +40,7 @@ const MyCartBrand = ({item, cartItems,setCartItems}) => {
 
     return (
         <div>
-               <div className="card h-full w-96  bg-base-100 mt-8 shadow-xl">
+               <div className="card h-full   bg-base-100 mt-8 shadow-xl">
   <figure className="w-full object-cover"><img src={image} className="h-24" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{brandName}</h2>

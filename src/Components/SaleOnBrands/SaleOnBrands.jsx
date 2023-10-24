@@ -11,12 +11,12 @@ const SaleOnBrands = ({brandCards}) => {
     console.log(jsonData);
     return (
 
-        <div>
+        <div className="lg:ml-5 md:ml-1">
   <div>
             <h1 className="text-center text-4xl font-bold mt-9 mb-10">Sale</h1>
             <p className="text-center mb-10 font-semibold mt-4">Discover your beauty favorites at unbeatable prices! Our cosmetics sale is here, offering you a chance to glam up for less.</p>
 
-<div className="grid grid-cols-3">
+<div className="grid md:grid-cols-3 md:gap-5">
     
 {
                 jsonData?.slice(0,3).map(brandCards =><SaleCards  brandCards={brandCards} >
