@@ -51,7 +51,8 @@ const Login = () => {
       const email = e.target.email.value;
       const password = e.target.password.value;
     
-      console.log( email, password)
+      console.log('Email:', email);
+      console.log('Password:', password);
 
       if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
         Swal.fire('Password should be more than 6 charecters and one upper letter and a special cherecter')

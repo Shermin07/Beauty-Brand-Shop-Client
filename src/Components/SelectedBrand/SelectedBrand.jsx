@@ -32,7 +32,7 @@ const SelectedBrand = ({selectedBrand}) => {
       <div className="badge badge-outline">{rating}</div>
      
     </div>
-    <Link to={`/singleBrandDetails/${_id}`} className="btn " >Details</Link><br/>
+    <Link to={`/brandDetails/${_id}`} className="btn " >Details</Link><br/>
                <Link  to="/updateBrand" className="btn " >Update</Link>
   </div>
 </div>
