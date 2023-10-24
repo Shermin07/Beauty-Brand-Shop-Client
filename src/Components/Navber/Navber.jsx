@@ -16,7 +16,7 @@ const Navber = () => {
       console.error(error)
     })
    }
-     console.log(user)
+    
 
     const navLinks = <>
     
@@ -53,7 +53,7 @@ const Navber = () => {
   </div>
   <div className="navbar-end">
   <p>{user?.name}</p>
-  <img src={user?.photo} alt={user?.name} />
+  <img src={user?.photo}  />
    
   {
     user? <button onClick={handleSignOut}>Sign Out</button> : <Link to ="/login" className="btn"> Login

@@ -36,7 +36,9 @@ const Register = () => {
         createUser(email,password,name,photo)
         .then (result =>{
             console.log(result.user)
+            e.target.reset() ;
             Swal.fire('Registration done succesfully!')
+           
         })
         .catch(error =>{
             console.error(error.message)

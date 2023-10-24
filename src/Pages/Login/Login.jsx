@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import  { AuthContext,auth } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
-import { GithubAuthProvider, signInWithPopup } from "@firebase/auth";
+import { GithubAuthProvider,sendPasswordResetEmail, signInWithPopup } from "@firebase/auth";
 import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
+import { useRef } from "react";
 
 
 
@@ -14,10 +16,33 @@ const Login = () => {
    const [loginError, setLoginError] = useState('') ;
    const [loginSuccess, setLoginSuccess] = useState('') ;
    const [showPassword, setShowPassword] = useState(false) ;
+   const emailRef = useRef(null) ;
+
+
+   const  handleForgetPassword = () =>{
+
+    const email = emailRef.current.value ;
+    if(!email){
+     console.log('Please provide an email',emailRef.current.value)
+     return ;
+      
+    }
+    else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)){
+      console.log('Please write a valid email')
+      return ;
+  }
+
+ sendPasswordResetEmail(auth,email)
+  .then(() =>{
+    Swal.fire('please check your email') ;
+     setLoginSuccess()
+  })
+  .catch(error =>{
+      console.log(error) ;
+  })
+}
 
     const handleLogin = e =>{
-
-      
       setLoginSuccess('');
       setLoginError('');
 
@@ -33,21 +58,20 @@ const Login = () => {
         return ;
     }
 
-
-
-
-
-
-
-      signIn(email, password)
+  signIn(email, password)
       .then(result =>{
         console.log(result.user)
+       e.target.reset() ;
         Swal.fire("Your login successfully done! now you can visit our website")
       })
       .catch(error =>{
         Swal.fire('Please register first')
       })
     }
+  
+
+   
+
 
     const githubProvider = new GithubAuthProvider() ;
     const handleGithubLogin = () =>{
@@ -80,7 +104,7 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder=" Your email" name="email" className="input input-bordered" required />
+          <input type="email" ref={emailRef} placeholder=" Your email" name="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -94,7 +118,7 @@ const Login = () => {
       </span>
 
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <a href="#" onClick={handleForgetPassword} className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
        

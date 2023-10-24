@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import {  useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -8,9 +8,17 @@ const UpdateBrand = () => {
   const cartItems = useLoaderData();
   console.log(cartItems);
   
-  const {_id,name, brandName, type,price,shortDescription,image,rating,details} = cartItems || {} ;
+  const {name, brandName, type,price,_id,image,rating,details} = cartItems || {} ;
 
-    const [selectedRating,setSelectedRating] = useState()
+
+  //const { _id } = useParams();
+  
+  const [selectedRating, setSelectedRating] = useState("");
+
+ 
+
+
+   
 
     const handleUpdate = e =>{
         e.preventDefault();
@@ -61,7 +69,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
     
-    <input type="text" name="name" placeholder="Name" className="input input-bordered w-96" />
+    <input type="text" name="name" defaultValue={name} placeholder="Name" className="input input-bordered w-96" />
   </label>
 </div>
             <div className="form-control md:w-1/2">
@@ -70,7 +78,7 @@ const UpdateBrand = () => {
   </label>
   <label className="input-group">
    
-    <input type="text" name="brandName" defaultValue={name} placeholder="Brand name" className="input input-bordered w-96" />
+    <input type="text" name="brandName" defaultValue={brandName} placeholder="Brand name" className="input input-bordered w-96" />
   </label>
 </div>
           </div>

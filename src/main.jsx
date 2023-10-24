@@ -16,6 +16,8 @@ import BrandDetails from './Pages/BrandDetails/BrandDetails';
 import Register from './Pages/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import UpdateBrand from './Pages/UpdateBrand/UpdateBrand';
+import PrivateRoute from './PrivateRoute';
+import SingleBrandDetails from './Components/SingleBrandDetails/SingleBrandDetails';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProducts",
-        element:<Add_Products></Add_Products>
+        element:<PrivateRoute><Add_Products></Add_Products></PrivateRoute>
        
        
       },
@@ -39,6 +41,7 @@ const router = createBrowserRouter([
         path: "/updateBrand",
         element :<UpdateBrand></UpdateBrand>,
         loader : ({params}) => fetch(`http://localhost:5000/brandName/${params._id}`)
+
        
       },
       {
@@ -54,6 +57,10 @@ const router = createBrowserRouter([
       {
         path : "/register",
         element: <Register></Register>
+
+      },
+      {path: '/singleBrandDetails/:_id',
+      element :<PrivateRoute><SingleBrandDetails></SingleBrandDetails></PrivateRoute>
 
       },
       {
