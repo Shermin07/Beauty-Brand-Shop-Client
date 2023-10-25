@@ -42,14 +42,14 @@ const router = createBrowserRouter([
       {
         path: "/updateBrand/:id",
         element :<PrivateRoute><UpdateBrand></UpdateBrand></PrivateRoute>,
-        loader : ({params}) => fetch(`https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/brandName/${params._id}`)
+        loader : ({params}) => fetch(`https://a10-brand-shop-server-one.vercel.app/brandName/${params.id}`)
 
        
       },
       {
         path:"/myCart",
         element:<PrivateRoute><My_Cart></My_Cart></PrivateRoute>,
-        loader: () => fetch('https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/cartItem')
+        loader: () => fetch('https://a10-brand-shop-server-one.vercel.app/cartItem')
        
       },
       {
@@ -62,18 +62,18 @@ const router = createBrowserRouter([
 
       },
       {path: '/singleBrandDetails/:_id',
-      element :<PrivateRoute><SingleBrandDetails></SingleBrandDetails></PrivateRoute>
+      element :<SingleBrandDetails></SingleBrandDetails>
 
       },
       {
         path:"/brandCard/:brandName",
         element: <BrandSelections></BrandSelections>,
-        loader : () => fetch("https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/brandName")
+        loader : () => fetch("https://a10-brand-shop-server-one.vercel.app/brandName")
       },
       {
         path:"/brandDetails/:_id",
-        element: <BrandDetails></BrandDetails>,
-        loader: ({params}) => fetch(`https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/addToCart/${params._id}`)
+        element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://a10-brand-shop-server-one.vercel.app/brandName/${params._id}`)
       },
       {
         path:"*",

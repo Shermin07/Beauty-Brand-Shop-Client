@@ -22,7 +22,7 @@ const SingleBrandDetails = ({selectedBrand}) => {
            
         };
     
-        fetch('https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/addToCart', {
+        fetch('https://a10-brand-shop-server-one.vercel.app/addToCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

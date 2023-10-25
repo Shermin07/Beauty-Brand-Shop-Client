@@ -20,7 +20,7 @@ const MyCartBrand = ({item, cartItems,setCartItems}) => {
       }).then((result) => {
         if (result.isConfirmed) {
         
-            fetch(`https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/cartItems/${_id}`,{
+            fetch(`https://a10-brand-shop-server-one.vercel.app/cartItems/${_id}`,{
                 method :'Delete'
             })
             .then(res =>res.json())
