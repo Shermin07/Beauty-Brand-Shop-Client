@@ -22,7 +22,7 @@ const SingleBrandDetails = ({selectedBrand}) => {
            
         };
     
-        fetch('http://localhost:5000/addToCart', {
+        fetch('https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/addToCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

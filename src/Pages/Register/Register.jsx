@@ -37,7 +37,7 @@ const Register = () => {
         .then (result =>{
             console.log(result.user)
             e.target.reset() ;
-            Swal.fire('Registration done succesfully!')
+            Swal.fire('Registration done succesfully, now please login!')
            
         })
         .catch(error =>{
@@ -91,7 +91,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-white font-bold">Photo</span>
           </label>
-          <input type="photo" placeholder="Photo URL" name="photo" className="input input-bordered" required />
+          <input type="photo" placeholder="Photo URL" name="photo" className="input input-bordered"  />
           <label className="label">
           
           </label>

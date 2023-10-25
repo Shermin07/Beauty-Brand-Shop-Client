@@ -30,7 +30,7 @@ const UpdateBrand = () => {
         const updateBrand = {name, brandName, type,price,image,rating} ;
         console.log(updateBrand) ;
 
-        fetch(`http://localhost:5000/brandName/${id}`,{
+        fetch(`https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/brandName/${id}`,{
           method: "PUT",
           headers : {
               "content-type" : "application/json"

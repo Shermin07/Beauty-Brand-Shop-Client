@@ -11,8 +11,7 @@ const SelectedBrand = ({selectedBrand}) => {
    
 
     //console.log(selectedBrand)
-    
-
+   
 
     return (
         <div>

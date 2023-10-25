@@ -10,7 +10,8 @@ const BrandDetails = ({selectedBrand}) => {
 
     
 
-   
+    
+  
 
 
     return (

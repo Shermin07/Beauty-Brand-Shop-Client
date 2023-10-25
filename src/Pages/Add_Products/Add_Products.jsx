@@ -23,7 +23,7 @@ const Add_Products = () => {
         const newBrand = {name, brandName, type,price,shortDescription,image,rating} ;
         console.log(newBrand) ;
 
-        fetch("http://localhost:5000/brandName",{
+        fetch("https://a10-brand-shop-server-911zd5pk6-shermin-sultanas-projects.vercel.app/brandName",{
             method: "POST",
             headers : {
                 "content-type" : "application/json"
