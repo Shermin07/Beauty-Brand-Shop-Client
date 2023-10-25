@@ -26,7 +26,7 @@ const My_Cart = () => {
     
     <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
     {
-      loadedCartItems?.map(item =><MyCartBrand cartItems = {cartItems} 
+      cartItems?.map(item =><MyCartBrand cartItems = {cartItems} 
         setCartItems = {setCartItems}
          item ={item} 
       >

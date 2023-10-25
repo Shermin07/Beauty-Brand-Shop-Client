@@ -11,7 +11,7 @@ const UpdateBrand = () => {
   const {name, brandName, type,price,_id,image,rating,details} = cartItems || {} ;
 
 
-  //const { _id } = useParams();
+  const { id } = useParams();
   
   const [selectedRating, setSelectedRating] = useState("");
 
@@ -30,7 +30,7 @@ const UpdateBrand = () => {
         const updateBrand = {name, brandName, type,price,image,rating} ;
         console.log(updateBrand) ;
 
-        fetch(`http://localhost:5000/brandName/${_id}`,{
+        fetch(`http://localhost:5000/brandName/${id}`,{
           method: "PUT",
           headers : {
               "content-type" : "application/json"
