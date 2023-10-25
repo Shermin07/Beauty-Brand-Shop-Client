@@ -77,7 +77,7 @@ const UpdateBrand = () => {
   </label>
 </div>
           </div>
-           <div className="flg:flex grid grid-cols-1 mb-4 gap-4">
+           <div className="lg:flex grid grid-cols-1 mb-4 gap-4">
 
            <div className="form-control md:w-1/2">
   <label className="label">
