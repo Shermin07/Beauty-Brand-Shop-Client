@@ -33,7 +33,7 @@ const SelectedBrand = ({selectedBrand}) => {
      
     </div>
     <Link to={`/brandDetails/${_id}`} className="btn " >Details</Link><br/>
-               <Link  to="/updateBrand" className="btn " >Update</Link>
+               <Link  to={`/updateBrand/${_id}`} className="btn " >Update</Link>
   </div>
 </div>
 

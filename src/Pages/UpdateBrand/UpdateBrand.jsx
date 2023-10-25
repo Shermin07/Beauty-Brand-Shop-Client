@@ -15,12 +15,7 @@ const UpdateBrand = () => {
   
   const [selectedRating, setSelectedRating] = useState("");
 
- 
-
-
-   
-
-    const handleUpdate = e =>{
+  const handleUpdate = e =>{
         e.preventDefault();
 
         const form = e.target ;

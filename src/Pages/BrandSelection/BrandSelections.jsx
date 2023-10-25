@@ -13,7 +13,7 @@ const BrandSelections = () => {
     const [selectedBrand, setSelectedBrand] = useState([]) ;
 
     const brandCards = useLoaderData();
-    console.log(selectedBrand);
+    //console.log(selectedBrand);
 
     const {brandName} = useParams();
 

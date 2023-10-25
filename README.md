@@ -1,8 +1,26 @@
-# React + Vite
+**Features**
+**Firebase Authentication:**
+* User-friendly authentication with Firebase Authentication.
+* Secure registration and login functionality.
+* Manage user data and permissions effortlessly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GitHub Authentication:**
+* Enable GitHub authentication for a seamless login experience.
+* Access user data through their GitHub accounts.
+* Conveniently integrate GitHub into your application.
 
-Currently, two official plugins are available:
+**React Router:**
+* Multi-page application with React Router for smooth navigation.
+* Create a structured and user-friendly browsing experience.
+* Navigate between different sections of the app seamlessly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Sweet Alert Integration:**
+* Enhance the user interface with Sweet Alert pop-up notifications.
+* Visually appealing alerts for success messages, warnings, and errors.
+* Create a polished and user-friendly design.
+
+
+**React Marquee Component:**
+* Attractive scrolling text with the React Marquee component.
+* Engage users with eye-catching and dynamic content.
+* Perfect for showcasing important announcements or promotions.

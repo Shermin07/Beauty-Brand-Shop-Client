@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
 
 
@@ -31,7 +32,7 @@ const MyCartBrand = ({item, cartItems,setCartItems}) => {
             'Your item has been deleted.',
             'success' )
             const remaining = cartItems.filter(item => item._id !== _id)
-            setCartItems(remaining)
+            setCartItems(remaining) ;
                 }
             })
         }
